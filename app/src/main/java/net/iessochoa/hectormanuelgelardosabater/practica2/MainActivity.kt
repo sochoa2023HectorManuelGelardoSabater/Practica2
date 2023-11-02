@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         //Buscamos los views
         btAgenda = findViewById(R.id.btAgenda)
-// Establece un OnClickListener para el botón btAgenda
+        // Establece un OnClickListener para el botón btAgenda
         btAgenda.setOnClickListener {
             val intent = Intent(this, AgendaActivity::class.java)
             startActivity(intent)
