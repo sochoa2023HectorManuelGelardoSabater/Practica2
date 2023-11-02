@@ -7,12 +7,6 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var btAgenda: Button
-    /*fun agenda() {
-//Creamos el Intent hacia SaludoActivity
-        val intent = Intent(this, AgendaActivity::class.java)
-//iniciamos la activity SaludoActivity
-        startActivity(intent)
-    }*/
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

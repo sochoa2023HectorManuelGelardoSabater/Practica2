@@ -8,10 +8,10 @@
     tools:context=".AgendaActivity">
 
     <TextView
-        android:id="@+id/tvHector"
+        android:id="@+id/tvContacto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/app_name"
+        android:text="@string/nuevo_contacto"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         tools:text="Nuevo Contacto" />

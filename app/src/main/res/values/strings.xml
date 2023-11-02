@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Practica2</string>
     <string name="h_ctor_manuel_gelardo_pr_ctica_2">Héctor Manuel Gelardo - Práctica 2</string>
+    <string name="nuevo_contacto">Nuevo Contacto</string>
 </resources>
