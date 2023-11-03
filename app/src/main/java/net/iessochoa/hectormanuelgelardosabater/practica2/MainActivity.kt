@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var btAgenda: Button
-
+    private lateinit var btReceta: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -18,5 +18,12 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, AgendaActivity::class.java)
             startActivity(intent)
         }
+        btReceta = findViewById(R.id.btReceta)
+            // Establece un OnClickListener para el botón btReceta
+            btReceta.setOnClickListener {
+                val intent = Intent(this, RecetaActivity::class.java)
+                startActivity(intent)
+            }
+
     }
 }
