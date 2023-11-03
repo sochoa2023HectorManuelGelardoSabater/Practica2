@@ -9,19 +9,11 @@ class RecetaActivity : AppCompatActivity() {
     private lateinit var tvDescripcionIngredientes: TextView
     private lateinit var tvTextoDescripcion: TextView
     private lateinit var tvTextoReceta: TextView
-    fun enviartvTextoReceta() {
+
+    private fun enviartexto(texto: String, tipo: String) {
         val intent = Intent(this, MostrarActivity::class.java)
-        intent.putExtra(MostrarActivity.EXTRA_DATO, tvTextoReceta.text.toString())
-        startActivity(intent)
-    }
-    fun enviartvTextoDescripcion() {
-        val intent = Intent(this, MostrarActivity::class.java)
-        intent.putExtra(MostrarActivity.EXTRA_DATO, tvTextoDescripcion.text.toString())
-        startActivity(intent)
-    }
-    fun enviartvDescripcionIngredientes() {
-        val intent = Intent(this, MostrarActivity::class.java)
-        intent.putExtra(MostrarActivity.EXTRA_DATO, tvDescripcionIngredientes.text.toString())
+        intent.putExtra(MostrarActivity.EXTRA_DATO, texto)
+        intent.putExtra(MostrarActivity.EXTRA_TIPO, tipo)
         startActivity(intent)
     }
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,9 +24,9 @@ class RecetaActivity : AppCompatActivity() {
         tvTextoDescripcion = findViewById(R.id.tvTextoDescripcion)
         tvDescripcionIngredientes = findViewById(R.id.tvDescripcionIngredientes)
 
-        tvTextoReceta.setOnClickListener {enviartvTextoReceta()}
-        tvTextoDescripcion.setOnClickListener {enviartvTextoDescripcion()}
-        tvDescripcionIngredientes.setOnClickListener {enviartvDescripcionIngredientes()}
+        tvTextoReceta.setOnClickListener { enviartexto(tvTextoReceta.text.toString(),"Receta") }
+        tvTextoDescripcion.setOnClickListener { enviartexto(tvTextoDescripcion.text.toString(),"Descripcion") }
+        tvDescripcionIngredientes.setOnClickListener { enviartexto(tvDescripcionIngredientes.text.toString(),"Ingredientes") }
+        }
     }
-}
 
